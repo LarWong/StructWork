@@ -1,0 +1,5 @@
+all:construction.c
+	gcc main.c
+
+construction.o: construction.c construction.h
+	

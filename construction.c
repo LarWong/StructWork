@@ -7,11 +7,6 @@ struct Dog{
   char * name;
 };
 
-struct Dog_tuple{
-  struct Dog * pointer;
-  struct Dog doggy;
-};
-
 char * letters = "qwertyuiopasdfghjklzxcvbn";
 
 char * pickRand(){
