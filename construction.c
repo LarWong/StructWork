@@ -14,12 +14,15 @@ struct Dog_tuple{
 
 char * letters = "qwertyuiopasdfghjklzxcvbn";
 
-char pickRand(){
-  return letters[rand()%26];
+char * pickRand(){
+  return &letters[rand()%26];
 }
   
 struct Dog makeDog(){
-  struct Dog {(rand()%18 + 2); strcat(pickRand(), "ammy")}Doggy;
+  struct Dog Doggy;
+  Doggy.age = rand()%18 + 2;
+  Doggy.name = strcat(pickRand(), "ammy");
+  return Doggy;
 }
 
 void printInfo(struct Dog x){
@@ -34,7 +37,7 @@ void changeInfo(struct Dog * x, int newAge, char * newName){
 
 int main(){
   struct Dog doggy  = makeDog();
-  struct Dog * doggy_pointer = &doggy;
-  printf("%s", doggy_pointer->name);
+  //struct Dog * doggy_pointer = &doggy;
+  //printf("%s", doggy_pointer->name);
   return 0;
 }

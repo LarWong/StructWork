@@ -1,2 +1,2 @@
 all:construction.c
-	gcc constrution.c
+	gcc construction.c
