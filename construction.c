@@ -21,7 +21,7 @@ char * pickRand(){
 struct Dog makeDog(){
   struct Dog Doggy;
   Doggy.age = rand()%18 + 2;
-  Doggy.name = strcat(pickRand(), "ammy");
+  Doggy.name = "ammy";
   return Doggy;
 }
 
@@ -37,7 +37,8 @@ void changeInfo(struct Dog * x, int newAge, char * newName){
 
 int main(){
   struct Dog doggy  = makeDog();
-  //struct Dog * doggy_pointer = &doggy;
-  //printf("%s", doggy_pointer->name);
+  struct Dog * doggy_pointer = &doggy;
+  printf("%s\n", doggy_pointer->name);
+  printInfo(doggy);
   return 0;
 }
