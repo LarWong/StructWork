@@ -22,6 +22,16 @@ struct Dog makeDog(){
   struct Dog {(rand()%18 + 2); strcat(pickRand(), "ammy")}Doggy;
 }
 
+void printInfo(struct Dog x){
+    printf("Name of Dog: %s\n", x.name);
+    printf("Age of Dog: %d\n", x.age);
+}
+
+void changeInfo(struct Dog * x, int newAge, char * newName){
+   x->age = newAge;
+   x->name = newName;
+}
+
 int main(){
   struct Dog doggy  = makeDog();
   struct Dog * doggy_pointer = &doggy;
